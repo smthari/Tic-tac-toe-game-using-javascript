@@ -115,7 +115,7 @@ img {
   .container {
     margin-left: 12.5%;
     grid-template-columns: repeat(3, 20vw);
-    grid-template-rows: repeat(3, 15vw);
+    grid-template-rows: repeat(3, 20vw);
   }
   .gameinfo {
     padding: 85px 50px;

@@ -47,8 +47,8 @@ const checkWin = () => {
       document.querySelector(
         ".line"
       ).style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
-      document.querySelector(".line").style.width = "calc(1rem + 20vw)";
-      // document.querySelector(".line").classList.add("linewidth");
+      // document.querySelector(".line").style.width = "calc(1rem + 20vw)";
+      document.querySelector(".line").classList.add("linewidth");
     }
   });
 };
@@ -94,6 +94,6 @@ reset.addEventListener("click", () => {
   /* document.querySelector(".imgbox").getElementsByTagName("img")[0].style.width =
     "0"; */
   // hiding line after reset by giving styling width 0
-  document.querySelector(".line").style.width = "0";
-  // document.querySelector(".line").classList.remove("linewidth");
+  // document.querySelector(".line").style.width = "0";
+  document.querySelector(".line").classList.remove("linewidth");
 });
