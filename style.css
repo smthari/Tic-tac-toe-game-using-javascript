@@ -101,6 +101,10 @@ img {
   transition: width 0.5s ease-in-out;
 }
 
+.linewidthremove {
+  width: 0;
+}
+
 @media only screen and (max-width: 600px) {
   .gameContainer {
     display: block;
@@ -118,13 +122,17 @@ img {
     text-align: center;
   }
   .linewidth {
-    margin-top: 5px;
-    width: calc(10px + 50vw);
+    /* margin-top: 20px; */
+    margin: auto;
+    width: calc(0em + 50vw);
   }
   .imgbox {
     margin-top: 20px;
   }
-  .imgbox img {
+  /* .imgbox img {
     width: 0;
+  } */
+  .imgwidth {
+    width: 150px;
   }
 }

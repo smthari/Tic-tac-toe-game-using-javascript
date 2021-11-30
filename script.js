@@ -38,12 +38,17 @@ const checkWin = () => {
       // selecting a img box and giving width to img for showing winning image after won
       document
         .querySelector(".imgbox")
-        .getElementsByTagName("img")[0].style.width = "10rem";
+        .getElementsByTagName("img")[0]
+        .classList.add("imgwidth");
+      /* document
+        .querySelector(".imgbox")
+        .getElementsByTagName("img")[0].style.width = "10rem"; */
       // transforming a line based on winning position
       document.querySelector(
         ".line"
       ).style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
-      document.querySelector(".line").style.width = "20vw";
+      document.querySelector(".line").style.width = "calc(1rem + 20vw)";
+      // document.querySelector(".line").classList.add("linewidth");
     }
   });
 };
@@ -82,8 +87,13 @@ reset.addEventListener("click", () => {
   // print "turn for" + turn = "x"
   document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
   // hiding winning image after reset by giving styling width 0
-  document.querySelector(".imgbox").getElementsByTagName("img")[0].style.width =
-    "0";
+  document
+    .querySelector(".imgbox")
+    .getElementsByTagName("img")[0]
+    .classList.remove("imgwidth");
+  /* document.querySelector(".imgbox").getElementsByTagName("img")[0].style.width =
+    "0"; */
   // hiding line after reset by giving styling width 0
   document.querySelector(".line").style.width = "0";
+  // document.querySelector(".line").classList.remove("linewidth");
 });
