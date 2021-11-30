@@ -55,9 +55,13 @@ nav ul {
   font-family: "Roboto", sans-serif;
 }
 
-.imgbox img {
+img {
   width: 0;
   transition: 0.5s ease-in-out;
+}
+
+.imgwidth {
+  width: 250px;
 }
 
 .br-0 {
@@ -87,4 +91,40 @@ nav ul {
   position: absolute;
   background-color: #911d91;
   transition: width 0.5s ease-in-out;
+}
+
+.linewidth {
+  height: 5px;
+  width: calc(1rem + 20vw);
+  position: absolute;
+  background-color: #911d91;
+  transition: width 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .gameContainer {
+    display: block;
+    margin-top: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .container {
+    margin-left: 12.5%;
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 15vw);
+  }
+  .gameinfo {
+    padding: 85px 50px;
+    text-align: center;
+  }
+  .linewidth {
+    margin-top: 5px;
+    width: calc(10px + 50vw);
+  }
+  .imgbox {
+    margin-top: 20px;
+  }
+  .imgbox img {
+    width: 0;
+  }
 }

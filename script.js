@@ -38,12 +38,14 @@ const checkWin = () => {
       // selecting a img box and giving width to img for showing winning image after won
       document
         .querySelector(".imgbox")
-        .getElementsByTagName("img")[0].style.width = "250px";
-      // transforming a line based on winning position 
+        .getElementsByTagName("img")[0].style.width = "10rem";
+      // transforming a line based on winning position
       document.querySelector(
         ".line"
       ).style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
-      document.querySelector(".line").style.width = "20vw";
+      // document.querySelector(".line").style.width = "20vw";
+      let responsivLineeWidth = document.getElementById("line");
+      responsivLineeWidth.classList.add("linewidth");
     }
   });
 };
@@ -57,7 +59,7 @@ Array.from(boxes).forEach((element) => {
     // if innerText of boxtext is empty then it would be equal to turn
     if (boxtext.innerText === "") {
       boxtext.innerText = turn;
-      // assign a turn to changeTurn function 
+      // assign a turn to changeTurn function
       turn = changeTurn();
       checkWin();
       // if game is not over we should print "turn for" + (turn) we'll get value of turn from above function
@@ -84,6 +86,6 @@ reset.addEventListener("click", () => {
   // hiding winning image after reset by giving styling width 0
   document.querySelector(".imgbox").getElementsByTagName("img")[0].style.width =
     "0";
-    // hiding line after reset by giving styling width 0
+  // hiding line after reset by giving styling width 0
   document.querySelector(".line").style.width = "0";
 });
